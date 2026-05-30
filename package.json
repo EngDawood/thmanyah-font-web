@@ -6,6 +6,9 @@
   "style": "index.css",
   "files": [
     "index.css",
+    "sans.css",
+    "serif-display.css",
+    "serif-text.css",
     "LICENSE"
   ],
   "directories": {

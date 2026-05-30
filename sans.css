@@ -1,0 +1,51 @@
+/*! Thmanyah Sans | github.com/engdawood/thmanyah-font-web */
+
+@font-face {
+  font-family: "Thmanyah Sans";
+  src: url("https://cdn.jsdelivr.net/gh/engdawood/thmanyah-font-web@main/fonts/thmanyah-sans/woff2/thmanyah-sans-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF,
+    U+FE70-FEFF, U+0020-007F, U+00A0-00FF, U+0100-024F, U+0250-02AF;
+}
+
+@font-face {
+  font-family: "Thmanyah Sans";
+  src: url("https://cdn.jsdelivr.net/gh/engdawood/thmanyah-font-web@main/fonts/thmanyah-sans/woff2/thmanyah-sans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF,
+    U+FE70-FEFF, U+0020-007F, U+00A0-00FF, U+0100-024F, U+0250-02AF;
+}
+
+@font-face {
+  font-family: "Thmanyah Sans";
+  src: url("https://cdn.jsdelivr.net/gh/engdawood/thmanyah-font-web@main/fonts/thmanyah-sans/woff2/thmanyah-sans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF,
+    U+FE70-FEFF, U+0020-007F, U+00A0-00FF, U+0100-024F, U+0250-02AF;
+}
+
+@font-face {
+  font-family: "Thmanyah Sans";
+  src: url("https://cdn.jsdelivr.net/gh/engdawood/thmanyah-font-web@main/fonts/thmanyah-sans/woff2/thmanyah-sans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF,
+    U+FE70-FEFF, U+0020-007F, U+00A0-00FF, U+0100-024F, U+0250-02AF;
+}
+
+@font-face {
+  font-family: "Thmanyah Sans";
+  src: url("https://cdn.jsdelivr.net/gh/engdawood/thmanyah-font-web@main/fonts/thmanyah-sans/woff2/thmanyah-sans-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF,
+    U+FE70-FEFF, U+0020-007F, U+00A0-00FF, U+0100-024F, U+0250-02AF;
+}
