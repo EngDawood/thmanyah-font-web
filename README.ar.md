@@ -77,14 +77,7 @@
 ### الطريقة ٢ — مدير الحزم
 
 ```bash
-# pnpm (موصى به)
-pnpm add @engdawood/thmanyah-font-web
-
-# npm
 npm install @engdawood/thmanyah-font-web
-
-# yarn
-yarn add @engdawood/thmanyah-font-web
 ```
 
 ثم استورد ملف CSS في مشروعك:

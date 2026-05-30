@@ -77,14 +77,7 @@ Add a single `<link>` tag to your HTML. No build step, no install, no download.
 ### Option 2 — Package Manager
 
 ```bash
-# pnpm (recommended)
-pnpm add @engdawood/thmanyah-font-web
-
-# npm
 npm install @engdawood/thmanyah-font-web
-
-# yarn
-yarn add @engdawood/thmanyah-font-web
 ```
 
 Then import the CSS in your project:
