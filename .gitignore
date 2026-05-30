@@ -4,3 +4,6 @@ package-lock.json
 Thumbs.db
 *.log
 CLAUDE.md
+*/__MACOSX/*
+Thmanyah-Font-Family/__MACOSX/*
+Thmanyah-Font-Family/__MACOSX/thmanyah typeface/._.DS_Store
