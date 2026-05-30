@@ -138,4 +138,9 @@ article p {
 
 The Thmanyah font family is designed and owned by [Thmanyah (ثمانية)](https://thmanyah.com). Font license details at [font.thmanyah.com/licenses](https://font.thmanyah.com/licenses).
 
-This community package (CSS wrapper + CDN setup) is maintained by [@engdawood](https://github.com/engdawood).
+> **⚠️ License Notice:** The Thmanyah font license permits **personal use only**.
+> Self-hosting, redistributing, or serving the font files from your own server or CDN is **not permitted** under the official license.
+> Download the font directly from [font.thmanyah.com](https://font.thmanyah.com) for use on your own devices and projects.
+> For enterprise or extended licensing, contact Thmanyah at [Ask@thmanyah.com](mailto:Ask@thmanyah.com).
+
+This package (CSS wrapper + CDN setup) is maintained by [@engdawood](https://github.com/engdawood).

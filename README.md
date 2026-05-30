@@ -14,7 +14,7 @@
 
 ## 📦 معلومات الحزمة
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 [![NPM Version](https://img.shields.io/npm/v/@engdawood/thmanyah-font-web)](https://www.npmjs.com/package/@engdawood/thmanyah-font-web)
 [![Font Weights](https://img.shields.io/badge/weights-300%20·%20400%20·%20500%20·%20700%20·%20900-blueviolet)](#عائلات-الخطوط-والأوزان)
@@ -45,7 +45,7 @@
 
 أضف وسم `<link>` واحد لصفحتك. بدون تثبيت، بدون تحميل، بدون أي إعدادات.
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 **jsDelivr:**
 
@@ -69,7 +69,7 @@
 
 ### الطريقة ٢ — مدير الحزم
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 ```bash
 npm install @engdawood/thmanyah-font-web
@@ -91,7 +91,7 @@ import "@engdawood/thmanyah-font-web";
 
 انسخ مجلد `fonts/` وملف `index.css` لمشروعك، ثم اربطه في صفحتك:
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 ```html
 <link rel="stylesheet" href="path/to/index.css" />
@@ -103,7 +103,7 @@ import "@engdawood/thmanyah-font-web";
 
 ## 🔤 عائلات الخطوط والأوزان
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 | Family | CSS `font-family` | Weights |
 | --- | --- | --- |
@@ -119,7 +119,7 @@ import "@engdawood/thmanyah-font-web";
 
 ### خصائص CSS مباشرة
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 ```css
 body {
@@ -143,7 +143,7 @@ article p {
 
 ### الأصناف الجاهزة (Utility Classes)
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 ```html
 <!-- Family -->
@@ -176,8 +176,13 @@ article p {
 
 ## 📄 الترخيص
 
-خط ثمانية من تصميم وملكية [ثمانية](https://thmanyah.com). تفاصيل الترخيص على [font.thmanyah.com/licenses](https://font.thmanyah.com/licenses).
+خط ثمانية من تصميم وملكية [ثمانية](https://thmanyah.com). تفاصيل الترخيص في [font.thmanyah.com/licenses](https://font.thmanyah.com/licenses).
 
-حزمة الويب المجتمعية (إعداد CSS و CDN) بواسطة [@engdawood](https://github.com/engdawood).
+> **⚠️ تنبيه بشأن الترخيص:** ترخيص خط ثمانية مخصص للاستخدام **الشخصي فقط**.
+> **لا يُجيز** الترخيص الرسمي استضافة ملفات الخط أو إعادة توزيعها أو تقديمها من خادمك الخاص أو CDN.
+> للحصول على الخط، زُر الموقع الرسمي مباشرةً: [font.thmanyah.com](https://font.thmanyah.com)
+> للاستخدام المؤسسي أو ترخيص موسّع، تواصل مع ثمانية على [Ask@thmanyah.com](mailto:Ask@thmanyah.com).
+
+حزمة الويب (إعداد CSS و CDN) بواسطة [@engdawood](https://github.com/engdawood).
 
 </div>
