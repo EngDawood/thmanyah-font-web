@@ -6,7 +6,6 @@
   "style": "index.css",
   "files": [
     "index.css",
-    "fonts/**/woff2/*.woff2",
     "LICENSE"
   ],
   "directories": {
