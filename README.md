@@ -122,11 +122,6 @@ article p {
 | `.font-weight-bold` | `font-weight: 700` |
 | `.font-weight-black` | `font-weight: 900` |
 
----
-
-## Live Demo
-
-[engdawood.github.io/thmanyah-font-web/examples/demo.html](https://engdawood.github.io/thmanyah-font-web/examples/demo.html)
 
 ---
 
@@ -135,14 +130,7 @@ article p {
 | | Link |
 |---|---|
 | Try the font | [font.thmanyah.com](https://font.thmanyah.com/) |
-| Font License | [font.thmanyah.com/licenses](https://font.thmanyah.com/licenses) |
 
 ---
 
 ## License
-
-The Thmanyah font family is licensed under the **Thmanyah Font License** — see [`ترخيص خط ثمانية.md`](Thmanyah-Font-Family/ترخيص%20خط%20ثمانية.md) for the full terms.
-
-Key points: free for personal and commercial use (logos, websites, apps, print). Redistribution or hosting of the font files independently is not permitted.
-
-This community CSS wrapper is maintained by [@engdawood](https://github.com/engdawood).
