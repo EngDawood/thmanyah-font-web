@@ -1,0 +1,45 @@
+{
+  "name": "@engdawood/thmanyah-font-web",
+  "version": "1.0.0",
+  "description": "Community web package for the Thmanyah (ثمانية) font family — Sans, Serif Display & Serif Text in five weights. Drop-in CSS, CDN-ready, npm-installable.",
+  "main": "index.css",
+  "style": "index.css",
+  "files": [
+    "index.css",
+    "fonts/**/*",
+    "LICENSE"
+  ],
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"No tests — this is a font package\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/engdawood/thmanyah-font-web.git"
+  },
+  "keywords": [
+    "thmanyah",
+    "ثمانية",
+    "font",
+    "arabic",
+    "arabic-font",
+    "webfont",
+    "css",
+    "rtl",
+    "sans",
+    "serif",
+    "typography",
+    "font-face",
+    "woff2",
+    "otf",
+    "opentype"
+  ],
+  "author": "engdawood",
+  "license": "OFL-1.1",
+  "bugs": {
+    "url": "https://github.com/engdawood/thmanyah-font-web/issues"
+  },
+  "homepage": "https://engdawood.github.io/thmanyah-font-web/"
+}

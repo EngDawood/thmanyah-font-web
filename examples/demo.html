@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thmanyah Font Family — Demo | خط ثمانية</title>
+  <meta name="description" content="Live demo of the Thmanyah font family — Sans, Serif Display & Serif Text in five weights.">
+  <link rel="stylesheet" href="../index.css">
+  <style>
+    /* ─── Design Tokens ─── */
+    :root {
+      --bg: #0a0a0f;
+      --bg-card: #12121a;
+      --bg-card-hover: #1a1a28;
+      --border: #1e1e30;
+      --border-accent: #3a3a5c;
+      --text-primary: #f0f0f5;
+      --text-secondary: #8888aa;
+      --text-muted: #555570;
+      --accent: #7c5cfc;
+      --accent-glow: rgba(124, 92, 252, 0.15);
+      --accent-hover: #9b7eff;
+      --gradient-hero: linear-gradient(135deg, #7c5cfc 0%, #c084fc 50%, #f472b6 100%);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-mono: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+    }
+
+    /* ─── Reset ─── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: "Thmanyah Sans", system-ui, sans-serif;
+      font-weight: 400;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ─── Background Grid ─── */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.25;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ─── Ambient Glow ─── */
+    body::after {
+      content: "";
+      position: fixed;
+      top: -30%;
+      right: -10%;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      animation: float 15s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(-40px, 30px) scale(1.05); }
+      66% { transform: translate(20px, -20px) scale(0.95); }
+    }
+
+    /* ─── Container ─── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      text-align: center;
+      padding: 80px 0 60px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: var(--accent-glow);
+      border: 1px solid var(--accent);
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--accent-hover);
+      margin-bottom: 32px;
+      letter-spacing: 0.03em;
+    }
+
+    .hero-badge::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    .hero h1 {
+      font-family: "Thmanyah Serif Display", serif;
+      font-weight: 900;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1.15;
+      background: var(--gradient-hero);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(124, 92, 252, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      box-shadow: 0 6px 30px rgba(124, 92, 252, 0.45);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-accent);
+      transform: translateY(-2px);
+    }
+
+    /* ─── Section ─── */
+    section {
+      margin-bottom: 80px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header h2 {
+      font-family: "Thmanyah Sans", sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--text-primary);
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 500;
+      padding: 4px 10px;
+      background: var(--accent-glow);
+      border-radius: 6px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ─── Font Card ─── */
+    .font-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 20px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .font-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 2px;
+      background: var(--gradient-hero);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .font-card:hover {
+      border-color: var(--border-accent);
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .font-card:hover::before {
+      opacity: 1;
+    }
+
+    .font-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .font-card-header .weight-name {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      font-family: var(--font-mono);
+    }
+
+    .font-card-header .weight-value {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      padding: 3px 8px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 4px;
+    }
+
+    .sample-text {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      line-height: 1.8;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      word-break: break-word;
+    }
+
+    .sample-text-sm {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: var(--text-secondary);
+    }
+
+    /* ─── Install Snippet ─── */
+    .install-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    .install-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .install-card:hover {
+      border-color: var(--border-accent);
+    }
+
+    .install-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,0.01);
+    }
+
+    .install-card-header span {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .copy-btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.7rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: var(--font-mono);
+      transition: var(--transition);
+    }
+
+    .copy-btn:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .install-card pre {
+      padding: 16px 20px;
+      margin: 0;
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: var(--accent-hover);
+      direction: ltr;
+      text-align: left;
+    }
+
+    /* ─── Type Tester ─── */
+    .type-tester {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+    }
+
+    .type-tester-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: center;
+    }
+
+    .type-tester-controls label {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .type-tester-controls select,
+    .type-tester-controls input[type="range"] {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    .type-tester-controls input[type="range"] {
+      width: 160px;
+      accent-color: var(--accent);
+    }
+
+    .type-tester-preview {
+      min-height: 120px;
+      padding: 24px;
+      background: rgba(255,255,255,0.01);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 2rem;
+      line-height: 1.8;
+      outline: none;
+      color: var(--text-primary);
+      transition: var(--transition);
+    }
+
+    .type-tester-preview:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      margin-top: 60px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    /* ─── Size indicator ─── */
+    .size-indicator {
+      display: inline-block;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 600px) {
+      .hero { padding: 40px 0 40px; }
+      .font-card { padding: 20px; }
+      .install-grid { grid-template-columns: 1fr; }
+      .type-tester-controls { flex-direction: column; align-items: stretch; }
+      .hero-actions { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- ───── Hero ───── -->
+    <header class="hero">
+      <div class="hero-badge">خطوط ثمانية للويب</div>
+      <h1>خط ثمانية</h1>
+      <p>
+        حزمة مجتمعية لعائلة خطوط ثمانية — سانس، سيريف ديسبلاي، وسيريف تكست —
+        بخمسة أوزان لكل عائلة. جاهزة للاستخدام على الويب عبر CSS أو CDN أو npm.
+        <br><small style="color: var(--text-muted);">الخط من تصميم وملكية <a href="https://thmanyah.com" style="color: var(--accent);">ثمانية</a></small>
+      </p>
+      <div class="hero-actions">
+        <a href="https://github.com/engdawood/thmanyah-font-web" class="btn btn-primary" target="_blank">
+          GitHub ←
+        </a>
+        <a href="https://www.npmjs.com/package/@engdawood/thmanyah-font-web" class="btn btn-secondary" target="_blank">
+          npm ←
+        </a>
+      </div>
+    </header>
+
+    <!-- ───── Installation ───── -->
+    <section id="install">
+      <div class="section-header">
+        <h2>التثبيت</h2>
+        <span class="section-label">INSTALL</span>
+      </div>
+      <div class="install-grid">
+        <div class="install-card">
+          <div class="install-card-header">
+            <span>pnpm</span>
+            <button class="copy-btn" onclick="copyCode(this)">نسخ</button>
+          </div>
+          <pre><code>pnpm add @engdawood/thmanyah-font-web</code></pre>
+        </div>
+        <div class="install-card">
+          <div class="install-card-header">
+            <span>CSS Import</span>
+            <button class="copy-btn" onclick="copyCode(this)">نسخ</button>
+          </div>
+          <pre><code>@import "@engdawood/thmanyah-font-web";</code></pre>
+        </div>
+        <div class="install-card">
+          <div class="install-card-header">
+            <span>jsDelivr CDN</span>
+            <button class="copy-btn" onclick="copyCode(this)">نسخ</button>
+          </div>
+          <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@engdawood/thmanyah-font-web/index.css"&gt;</code></pre>
+        </div>
+        <div class="install-card">
+          <div class="install-card-header">
+            <span>unpkg CDN</span>
+            <button class="copy-btn" onclick="copyCode(this)">نسخ</button>
+          </div>
+          <pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/@engdawood/thmanyah-font-web/index.css"&gt;</code></pre>
+        </div>
+        <div class="install-card">
+          <div class="install-card-header">
+            <span>CSS Usage</span>
+            <button class="copy-btn" onclick="copyCode(this)">نسخ</button>
+          </div>
+          <pre><code>body {
+  font-family: "Thmanyah Sans", sans-serif;
+}
+h1 {
+  font-family: "Thmanyah Serif Display", serif;
+  font-weight: 900;
+}</code></pre>
+        </div>
+        <div class="install-card">
+          <div class="install-card-header">
+            <span>Utility Classes</span>
+            <button class="copy-btn" onclick="copyCode(this)">نسخ</button>
+          </div>
+          <pre><code>&lt;p class="font-thmanyah-sans font-weight-bold"&gt;
+  نص بخط ثمانية سانس بولد
+&lt;/p&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───── Thmanyah Sans ───── -->
+    <section id="sans">
+      <div class="section-header">
+        <h2>ثمانية سانس</h2>
+        <span class="section-label">THMANYAH SANS</span>
+      </div>
+
+      <div class="font-card">
+        <div class="font-card-header">
+          <span class="weight-name">Light</span>
+          <span class="weight-value">300</span>
+        </div>
+        <div class="sample-text font-thmanyah-sans font-weight-light">
+          بسم الله الرحمن الرحيم — كل الحروف تحكي قصة
+        </div>
+        <div class="sample-text-sm font-thmanyah-sans font-weight-light">
+          الصحافة هي المسودة الأولى للتاريخ. نحن في ثمانية نؤمن بأن القصص تستحق أن تُروى بأجمل الخطوط.
+        </div>
+      </div>
+
+      <div class="font-card">
+        <div class="font-card-header">
+          <span class="weight-name">Regular</span>
+          <span class="weight-value">400</span>
+        </div>
+        <div class="sample-text font-thmanyah-sans font-weight-regular">
+          بسم الله الرحمن الرحيم — كل الحروف تحكي قصة
+        </div>
+        <div class="sample-text-sm font-thmanyah-sans font-weight-regular">
+          الصحافة هي المسودة الأولى للتاريخ. نحن في ثمانية نؤمن بأن القصص تستحق أن تُروى بأجمل الخطوط.
+        </div>
+      </div>
+
+      <div class="font-card">
+        <div class="font-card-header">
+          <span class="weight-name">Medium</span>
+          <span class="weight-value">500</span>
+        </div>
+        <div class="sample-text font-thmanyah-sans font-weight-medium">
+          بسم الله الرحمن الرحيم — كل الحروف تحكي قصة
+        </div>
+        <div class="sample-text-sm font-thmanyah-sans font-weight-medium">
+          الصحافة هي المسودة الأولى للتاريخ. نحن في ثمانية نؤمن بأن القصص تستحق أن تُروى بأجمل الخطوط.
+        </div>
+      </div>
+
+      <div class="font-card">
+        <div class="font-card-header">
+          <span class="weight-name">Bold</span>
+          <span class="weight-value">700</span>
+        </div>
+        <div class="sample-text font-thmanyah-sans font-weight-bold">
+          بسم الله الرحمن الرحيم — كل الحروف تحكي قصة
+        </div>
+        <div class="sample-text-sm font-thmanyah-sans font-weight-bold">
+          الصحافة هي المسودة الأولى للتاريخ. نحن في ثمانية نؤمن بأن القصص تستحق أن تُروى بأجمل الخطوط.
+        </div>
+      </div>
+
+      <div class="font-card">
+        <div class="font-card-header">
+          <span class="weight-name">Black</span>
+          <span class="weight-value">900</span>
+        </div>
+        <div class="sample-text font-thmanyah-sans font-weight-black">
+          بسم الله الرحمن الرحيم — كل الحروف تحكي قصة
+        </div>
+        <div class="sample-text-sm font-thmanyah-sans font-weight-black">
+          الصحافة هي المسودة الأولى للتاريخ. نحن في ثمانية نؤمن بأن القصص تستحق أن تُروى بأجمل الخطوط.
+        </div>
+      </div>
+    </section>
+
+    <!-- ───── Thmanyah Serif Display ───── -->
+    <section id="serif-display">
+      <div class="section-header">
+        <h2>ثمانية سيريف ديسبلاي</h2>
+        <span class="section-label">THMANYAH SERIF DISPLAY</span>
+      </div>
+
+      <div class="font-card">
+        <div class="font-card-header">
+          <span class="weight-name">Light</span>
+          <span class="weight-value">300</span>
+        </div>
+        <div class="sample-text font-thmanyah-serif-display font-weight-light">
+          بسم الله الرحمن الرحيم — كل الحروف تحكي قصة
+        </div>
+        <div class="sample-text-sm font-thmanyah-serif-display font-weight-light">
+          خط ثمانية سيريف ديسبلاي صُمم للعناوين الكبيرة والتصاميم الجريئة التي تلفت الأنظار.
+        </div>
+      </div>
+
+      <div class="font-card">
+        <div class="font-card-header">
+          <span class="weight-name">Regular</span>
+          <span class="weight-value">400</span>
+        </div>
+        <div class="sample-text font-thmanyah-serif-display font-weight-regular">
+          بسم الله الرحمن الرحيم — كل الحروف تحكي قصة
+        </div>
+        <div class="sample-text-sm font-thmanyah-serif-display font-weight-regular">
+          خط ثمانية سيريف ديسبلاي صُمم للعناوين الكبيرة والتصاميم الجريئة التي تلفت الأنظار.
+        </div>
+      </div>
+
+      <div class="font-card">
+        <div class="font-card-header">
+          <span class="weight-name">Medium</span>
+          <span class="weight-value">500</span>
+        </div>
+        <div class="sample-text font-thmanyah-serif-display font-weight-medium">
+          بسم الله الرحمن الرحيم — كل الحروف تحكي قصة
+        </div>
+        <div class="sample-text-sm font-thmanyah-serif-display font-weight-medium">
+          خط ثمانية سيريف ديسبلاي صُمم للعناوين الكبيرة والتصاميم الجريئة التي تلفت الأنظار.
+        </div>
+      </div>
+
+      <div class="font-card">
+        <div class="font-card-header">
+          <span class="weight-name">Bold</span>
+          <span class="weight-value">700</span>
+        </div>
+        <div class="sample-text font-thmanyah-serif-display font-weight-bold">
+          بسم الله الرحمن الرحيم — كل الحروف تحكي قصة
+        </div>
+        <div class="sample-text-sm font-thmanyah-serif-display font-weight-bold">
+          خط ثمانية سيريف ديسبلاي صُمم للعناوين الكبيرة والتصاميم الجريئة التي تلفت الأنظار.
+        </div>
+      </div>
+
+      <div class="font-card">
+        <div class="font-card-header">
+          <span class="weight-name">Black</span>
+          <span class="weight-value">900</span>
+        </div>
+        <div class="sample-text font-thmanyah-serif-display font-weight-black">
+          بسم الله الرحمن الرحيم — كل الحروف تحكي قصة
+        </div>
+        <div class="sample-text-sm font-thmanyah-serif-display font-weight-black">
+          خط ثمانية سيريف ديسبلاي صُمم للعناوين الكبيرة والتصاميم الجريئة التي تلفت الأنظار.
+        </div>
+      </div>
+    </section>
+
+    <!-- ───── Thmanyah Serif Text ───── -->
+    <section id="serif-text">
+      <div class="section-header">
+        <h2>ثمانية سيريف تكست</h2>
+        <span class="section-label">THMANYAH SERIF TEXT</span>
+      </div>
+
+      <div class="font-card">
+        <div class="font-card-header">
+          <span class="weight-name">Light</span>
+          <span class="weight-value">300</span>
+        </div>
+        <div class="sample-text font-thmanyah-serif-text font-weight-light">
+          بسم الله الرحمن الرحيم — كل الحروف تحكي قصة
+        </div>
+        <div class="sample-text-sm font-thmanyah-serif-text font-weight-light">
+          خط ثمانية سيريف تكست مُحسّن للقراءة المطوّلة، يجمع بين أناقة السيريف وراحة العين في الأحجام الصغيرة.
+        </div>
+      </div>
+
+      <div class="font-card">
+        <div class="font-card-header">
+          <span class="weight-name">Regular</span>
+          <span class="weight-value">400</span>
+        </div>
+        <div class="sample-text font-thmanyah-serif-text font-weight-regular">
+          بسم الله الرحمن الرحيم — كل الحروف تحكي قصة
+        </div>
+        <div class="sample-text-sm font-thmanyah-serif-text font-weight-regular">
+          خط ثمانية سيريف تكست مُحسّن للقراءة المطوّلة، يجمع بين أناقة السيريف وراحة العين في الأحجام الصغيرة.
+        </div>
+      </div>
+
+      <div class="font-card">
+        <div class="font-card-header">
+          <span class="weight-name">Medium</span>
+          <span class="weight-value">500</span>
+        </div>
+        <div class="sample-text font-thmanyah-serif-text font-weight-medium">
+          بسم الله الرحمن الرحيم — كل الحروف تحكي قصة
+        </div>
+        <div class="sample-text-sm font-thmanyah-serif-text font-weight-medium">
+          خط ثمانية سيريف تكست مُحسّن للقراءة المطوّلة، يجمع بين أناقة السيريف وراحة العين في الأحجام الصغيرة.
+        </div>
+      </div>
+
+      <div class="font-card">
+        <div class="font-card-header">
+          <span class="weight-name">Bold</span>
+          <span class="weight-value">700</span>
+        </div>
+        <div class="sample-text font-thmanyah-serif-text font-weight-bold">
+          بسم الله الرحمن الرحيم — كل الحروف تحكي قصة
+        </div>
+        <div class="sample-text-sm font-thmanyah-serif-text font-weight-bold">
+          خط ثمانية سيريف تكست مُحسّن للقراءة المطوّلة، يجمع بين أناقة السيريف وراحة العين في الأحجام الصغيرة.
+        </div>
+      </div>
+
+      <div class="font-card">
+        <div class="font-card-header">
+          <span class="weight-name">Black</span>
+          <span class="weight-value">900</span>
+        </div>
+        <div class="sample-text font-thmanyah-serif-text font-weight-black">
+          بسم الله الرحمن الرحيم — كل الحروف تحكي قصة
+        </div>
+        <div class="sample-text-sm font-thmanyah-serif-text font-weight-black">
+          خط ثمانية سيريف تكست مُحسّن للقراءة المطوّلة، يجمع بين أناقة السيريف وراحة العين في الأحجام الصغيرة.
+        </div>
+      </div>
+    </section>
+
+    <!-- ───── Type Tester ───── -->
+    <section id="tester">
+      <div class="section-header">
+        <h2>جرّب الخط</h2>
+        <span class="section-label">TYPE TESTER</span>
+      </div>
+
+      <div class="type-tester">
+        <div class="type-tester-controls">
+          <label>
+            العائلة
+            <select id="testerFamily">
+              <option value="Thmanyah Sans">Thmanyah Sans</option>
+              <option value="Thmanyah Serif Display">Thmanyah Serif Display</option>
+              <option value="Thmanyah Serif Text">Thmanyah Serif Text</option>
+            </select>
+          </label>
+          <label>
+            الوزن
+            <select id="testerWeight">
+              <option value="300">Light — 300</option>
+              <option value="400" selected>Regular — 400</option>
+              <option value="500">Medium — 500</option>
+              <option value="700">Bold — 700</option>
+              <option value="900">Black — 900</option>
+            </select>
+          </label>
+          <label>
+            الحجم
+            <input type="range" id="testerSize" min="12" max="96" value="36">
+            <span id="testerSizeValue" class="size-indicator">36px</span>
+          </label>
+        </div>
+        <div
+          class="type-tester-preview"
+          id="testerPreview"
+          contenteditable="true"
+          spellcheck="false"
+          style="font-family: 'Thmanyah Sans', sans-serif; font-weight: 400; font-size: 36px;"
+        >اكتب هنا لتجربة خط ثمانية...</div>
+      </div>
+    </section>
+
+    <!-- ───── Footer ───── -->
+    <footer>
+      <div class="footer-links">
+        <a href="https://github.com/engdawood/thmanyah-font-web" target="_blank">GitHub</a>
+        <a href="https://www.npmjs.com/package/@engdawood/thmanyah-font-web" target="_blank">npm</a>
+        <a href="https://thmanyah.com" target="_blank">Thmanyah</a>
+      </div>
+      <p>
+        خط ثمانية © <a href="https://thmanyah.com" target="_blank">ثمانية</a> —
+        مرخّص تحت <a href="https://openfontlicense.org" target="_blank">OFL-1.1</a> —
+        تم تجميع هذه الحزمة بواسطة <a href="https://github.com/engdawood" target="_blank">engdawood</a>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    // Type Tester
+    const preview = document.getElementById("testerPreview");
+    const familySelect = document.getElementById("testerFamily");
+    const weightSelect = document.getElementById("testerWeight");
+    const sizeRange = document.getElementById("testerSize");
+    const sizeValue = document.getElementById("testerSizeValue");
+
+    familySelect.addEventListener("change", () => {
+      preview.style.fontFamily = `"${familySelect.value}", sans-serif`;
+    });
+    weightSelect.addEventListener("change", () => {
+      preview.style.fontWeight = weightSelect.value;
+    });
+    sizeRange.addEventListener("input", () => {
+      preview.style.fontSize = sizeRange.value + "px";
+      sizeValue.textContent = sizeRange.value + "px";
+    });
+
+    // Copy to clipboard
+    function copyCode(btn) {
+      const code = btn.closest(".install-card").querySelector("code").textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        const orig = btn.textContent;
+        btn.textContent = "تم ✓";
+        btn.style.color = "var(--accent)";
+        setTimeout(() => { btn.textContent = orig; btn.style.color = ""; }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
