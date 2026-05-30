@@ -38,6 +38,9 @@
   ],
   "author": "engdawood",
   "license": "OFL-1.1",
+  "publishConfig": {
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/engdawood/thmanyah-font-web/issues"
   },

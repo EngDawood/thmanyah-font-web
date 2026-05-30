@@ -4,7 +4,7 @@
 
 **A community‑maintained web package for the Thmanyah (ثمانية) font family — three families, five weights each.** Drop a single CSS file into your project and start using Thmanyah Sans, Thmanyah Serif Display, and Thmanyah Serif Text immediately.
 
-> **Note:** This is an unofficial community package. The Thmanyah font family is designed and owned by [Thmanyah (ثمانية)](https://thmanyah.com). This repo simply repackages the fonts for easy web/npm/CDN usage.
+> **Note:** The Thmanyah font family is designed and owned by [Thmanyah (ثمانية)](https://thmanyah.com). This repo is a community package that repackages the fonts for easy web/npm/CDN usage.
 
 ---
 
