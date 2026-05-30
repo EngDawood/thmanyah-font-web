@@ -1,7 +1,6 @@
 node_modules/
+package-lock.json
 .DS_Store
 Thumbs.db
 *.log
-_reference_repo/
-Thmanyah-Font-Family/
-Thmanyah-Font-Family.zip
+CLAUDE.md
