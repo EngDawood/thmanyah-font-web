@@ -8,8 +8,7 @@
     "index.css",
     "sans.css",
     "serif-display.css",
-    "serif-text.css",
-    "LICENSE"
+    "serif-text.css"
   ],
   "directories": {
     "example": "examples"
@@ -39,7 +38,7 @@
     "opentype"
   ],
   "author": "engdawood",
-  "license": "OFL-1.1",
+  "license": "SEE LICENSE IN https://font.thmanyah.com/licenses",
   "publishConfig": {
     "access": "public"
   },
