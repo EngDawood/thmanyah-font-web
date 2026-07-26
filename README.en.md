@@ -10,9 +10,9 @@ A community-maintained web package for the Thmanyah (ثمانية) font family �
 
 ---
 
-[![NPM Version](https://img.shields.io/npm/v/@engdawood/thmanyah-font-web)](https://www.npmjs.com/package/@engdawood/thmanyah-font-web)
-[![NPM Downloads](https://img.shields.io/npm/dt/@engdawood/thmanyah-font-web?label=npm%20downloads)](https://www.npmjs.com/package/@engdawood/thmanyah-font-web)
-[![jsDelivr Hits](https://img.shields.io/jsdelivr/npm/hm/@engdawood/thmanyah-font-web)](https://www.jsdelivr.com/package/npm/@engdawood/thmanyah-font-web)
+[![NPM Version](https://img.shields.io/npm/v/@dawod/thmanyah-font-web)](https://www.npmjs.com/package/@dawod/thmanyah-font-web)
+[![NPM Downloads](https://img.shields.io/npm/dt/@dawod/thmanyah-font-web?label=npm%20downloads)](https://www.npmjs.com/package/@dawod/thmanyah-font-web)
+[![jsDelivr Hits](https://img.shields.io/jsdelivr/npm/hm/@dawod/thmanyah-font-web)](https://www.jsdelivr.com/package/npm/@dawod/thmanyah-font-web)
 [![License](https://img.shields.io/badge/license-Thmanyah%20Font%20License-blue)](#license)
 
 ---
@@ -44,23 +44,23 @@ A community-maintained web package for the Thmanyah (ثمانية) font family �
 ### npm
 
 ```bash
-npm install @engdawood/thmanyah-font-web
+npm install @dawod/thmanyah-font-web
 ```
 
 ```js
 // All families
-import "@engdawood/thmanyah-font-web";
+import "@dawod/thmanyah-font-web";
 
 // Or import only what you need
-import "@engdawood/thmanyah-font-web/sans.css";
-import "@engdawood/thmanyah-font-web/serif-display.css";
-import "@engdawood/thmanyah-font-web/serif-text.css";
+import "@dawod/thmanyah-font-web/sans.css";
+import "@dawod/thmanyah-font-web/serif-display.css";
+import "@dawod/thmanyah-font-web/serif-text.css";
 ```
 
 ```css
 /* In CSS */
-@import "@engdawood/thmanyah-font-web";
-@import "@engdawood/thmanyah-font-web/sans.css";
+@import "@dawod/thmanyah-font-web";
+@import "@dawod/thmanyah-font-web/sans.css";
 ```
 
 ---
