@@ -24,7 +24,7 @@ Key facts:
 - `public/image.png` — README banner image.
 - `README.md` (Arabic, primary) and `README.en.md` (English) — user docs. Keep both in sync when changing usage, weights, class names, or URLs.
 - `.github/workflows/static.yml` — deploys the whole repo to GitHub Pages on every push to `main`.
-- `.github/workflows/publish.yml` — runs `npm publish` when a `v*` tag is pushed (uses `secrets.NPM_TOKEN`, Node 20).
+- `.github/workflows/publish.yml` — runs `npm publish` when a `v*` tag is pushed (npm **trusted publishing** via GitHub OIDC, Node 20 + latest npm; no token secret — requires the trusted publisher to be configured on npmjs.com).
 - `Thmanyah-Font-Family/`, `Thmanyah-Font-Family1/`, `*.zip`, `tmp/` — source/vendor material from the original font download; gitignored and/or excluded from npm. Do not modify or rely on them.
 - `node_modules/@engdawood/` — a local self-install of the published package (used for testing consumption); not a real dependency (`dependencies` is empty).
 
@@ -66,5 +66,5 @@ There are no automated tests, linters, or CI checks on the CSS. Manual verificat
 ## Security and licensing considerations
 
 - **License is restrictive**: the Thmanyah font license (see <https://font.thmanyah.com/licenses>) permits **personal use only** and does not authorize hosting/redistributing the font files. This repo's CDN redistribution is a community effort at the maintainer's own risk — flag any license-sensitive change (e.g. bundling fonts into npm, adding new font files) to the maintainer instead of doing it silently.
-- npm publish runs with a token secret in CI; the repo itself contains no secrets.
+- npm publish in CI uses OIDC trusted publishing (no stored token); the repo itself contains no secrets.
 - Do not commit the gitignored vendor directories (`Thmanyah-Font-Family*/`, `tmp/`, otf files) — they contain the original licensed downloads.
