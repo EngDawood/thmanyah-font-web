@@ -23,22 +23,22 @@ A community-maintained web package for the Thmanyah (ثمانية) font family �
 
 **All three families:**
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/engdawood/thmanyah-font-web@v1.2.0/index.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/engdawood/thmanyah-font-web@main/index.css" />
 ```
 
 **Sans only:**
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/engdawood/thmanyah-font-web@v1.2.0/sans.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/engdawood/thmanyah-font-web@main/sans.css" />
 ```
 
 **Serif Display only:**
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/engdawood/thmanyah-font-web@v1.2.0/serif-display.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/engdawood/thmanyah-font-web@main/serif-display.css" />
 ```
 
 **Serif Text only:**
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/engdawood/thmanyah-font-web@v1.2.0/serif-text.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/engdawood/thmanyah-font-web@main/serif-text.css" />
 ```
 
 ### npm
