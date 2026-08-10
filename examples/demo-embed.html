@@ -50,125 +50,7 @@
       overflow-x: hidden;
     }
 
-    /* ── Nav ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-      padding: 0 32px;
-      border-bottom: 1px solid var(--border);
-      background: color-mix(in srgb, var(--bg) 90%, transparent);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-    }
-
-    .nav-brand {
-      font-family: "Thmanyah Serif Display", serif;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--text-2);
-      text-decoration: none;
-      font-size: 0.875rem;
-      padding: 6px 12px;
-      border-radius: 6px;
-      transition: color 0.2s var(--ease), background 0.2s var(--ease);
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
-      background: var(--surface);
-    }
-
-    .nav-cta {
-      color: var(--accent) !important;
-      border: 1px solid var(--border-strong);
-      margin-right: 8px;
-    }
-
-    .nav-cta:hover {
-      background: var(--accent-dim) !important;
-      border-color: var(--accent) !important;
-    }
-
-    @media (max-width: 640px) {
-      .nav-links li:not(:last-child) { display: none; }
-    }
-
-    /* ── Hero ── */
-    .hero {
-      min-height: calc(100dvh - 64px);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 0 32px 48px;
-    }
-
-    .hero-eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-3);
-      font-family: var(--mono);
-      margin-bottom: 20px;
-      direction: ltr;
-      text-align: right;
-    }
-
-    .hero-title {
-      font-size: clamp(5rem, 17vw, 13rem);
-      line-height: 1.0;
-      letter-spacing: -0.015em;
-      color: var(--text);
-    }
-
-    .hero-meta {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 48px;
-      margin-top: 40px;
-      padding-top: 28px;
-      border-top: 1px solid var(--border);
-    }
-
-    .hero-description {
-      font-size: 1rem;
-      color: var(--text-2);
-      line-height: 1.75;
-      max-width: 440px;
-    }
-
-    .hero-description a {
-      color: var(--text-2);
-      text-decoration: none;
-      border-bottom: 1px solid var(--border-strong);
-      transition: color 0.2s, border-color 0.2s;
-    }
-
-    .hero-description a:hover { color: var(--text); border-color: var(--text-3); }
-
-    .hero-actions {
-      display: flex;
-      gap: 10px;
-      flex-shrink: 0;
-    }
-
+    /* ── Buttons ── */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -579,54 +461,9 @@
       .install-code { color: #4a4540; }
     }
 
-    /* ── Footer ── */
-    footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-      padding: 32px;
-      border-top: 1px solid var(--border);
-      margin-top: 0;
-    }
-
-    .footer-copy {
-      font-size: 0.8rem;
-      color: var(--text-3);
-    }
-
-    .footer-copy a {
-      color: var(--text-2);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .footer-copy a:hover { color: var(--text); }
-
-    .footer-links {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-    }
-
-    .footer-links a {
-      font-size: 0.8rem;
-      color: var(--text-3);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover { color: var(--text); }
-
     /* ── Responsive ── */
     @media (max-width: 768px) {
-      nav { padding: 0 20px; }
-      .hero { padding: 0 20px 40px; }
       .wrap { padding: 0 20px; }
-
-      .hero-title { font-size: clamp(3.8rem, 16vw, 7rem); }
-      .hero-meta { flex-direction: column; align-items: flex-start; gap: 20px; }
 
       .section { padding: 52px 0; }
 
@@ -646,8 +483,6 @@
 
       .tester-download { flex-direction: column; align-items: flex-start; }
       .dl-picker-btn { margin-inline-start: 0; }
-
-      footer { flex-direction: column; align-items: flex-start; padding: 28px 20px; }
     }
 
     /* ── Brand Visual ── */
@@ -672,36 +507,6 @@
   </style>
 </head>
 <body>
-
-  <!-- Nav -->
-  <nav>
-    <a class="nav-brand font-thmanyah-serif-display" href="#">خط ثمانية</a>
-    <ul class="nav-links">
-      <li><a href="#sans">سانس</a></li>
-      <li><a href="#serif-display">سيريف</a></li>
-      <li><a href="#tester">تجربة</a></li>
-      <li><a href="#download">تحميل</a></li>
-      <li><a href="#install" class="nav-cta">التثبيت</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero">
-    <div class="hero-eyebrow">Thmanyah Font Web — v1</div>
-    <h1 class="hero-title font-thmanyah-serif-display font-weight-black">ثمانية</h1>
-    <div class="hero-meta">
-      <p class="hero-description">
-        ثلاث عائلات: سانس، وسيريف ديسبلاي، وسيريف تكست.
-        خمسة أوزان لكل منها. جاهزة للويب عبر npm أو CDN.
-        <br>
-        <small style="color: var(--text-3);">الخط من تصميم وملكية <a href="https://thmanyah.com" target="_blank">ثمانية</a></small>
-      </p>
-      <div class="hero-actions">
-        <a href="https://github.com/engdawood/thmanyah-font-web" class="btn btn-primary" target="_blank">GitHub</a>
-        <a href="https://www.npmjs.com/package/@dawod/thmanyah-font-web" class="btn btn-secondary" target="_blank">npm</a>
-      </div>
-    </div>
-  </header>
 
   <!-- Brand visual -->
   <div class="brand-visual">
@@ -942,19 +747,6 @@ article {
     </section>
 
   </div><!-- /wrap -->
-
-  <!-- Footer -->
-  <footer>
-    <p class="footer-copy">
-      خط ثمانية &copy; <a href="https://thmanyah.com" target="_blank">ثمانية</a> &middot;
-      تجميع بواسطة <a href="https://github.com/engdawood" target="_blank">engdawood</a>
-    </p>
-    <ul class="footer-links">
-      <li><a href="https://github.com/engdawood/thmanyah-font-web" target="_blank">GitHub</a></li>
-      <li><a href="https://www.npmjs.com/package/@dawod/thmanyah-font-web" target="_blank">npm</a></li>
-      <li><a href="https://thmanyah.com" target="_blank">Thmanyah</a></li>
-    </ul>
-  </footer>
 
   <script>
     const preview      = document.getElementById("testerPreview");
