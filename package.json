@@ -1,6 +1,6 @@
 {
   "name": "@dawod/thmanyah-font-web",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Community web package for the Thmanyah (ثمانية) font family — Sans, Serif Display & Serif Text in five weights. Drop-in CSS, CDN-ready, npm-installable.",
   "main": "index.css",
   "style": "index.css",
@@ -8,7 +8,8 @@
     "index.css",
     "sans.css",
     "serif-display.css",
-    "serif-text.css"
+    "serif-text.css",
+    "fonts/"
   ],
   "directories": {
     "example": "examples"
