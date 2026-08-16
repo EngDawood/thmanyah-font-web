@@ -7,8 +7,19 @@
   <meta name="description" content="عائلة خطوط ثمانية للويب — سانس وسيريف ديسبلاي وسيريف تكست بخمسة أوزان.">
   <link rel="stylesheet" href="../index.css">
   <style>
-    /* ── Tokens ── */
-    :root {
+    /* ── Tokens ──────────────────────────────────────────────────────
+       Three theme states, so a host page can pin the embed instead of
+       inheriting the viewer's OS setting:
+         (no attribute)      → follow prefers-color-scheme
+         data-theme="light"  → forced light
+         data-theme="dark"   → forced dark
+       Set it via ?theme=light on the iframe src, the data-theme
+       attribute, or a postMessage — see the theme script below. */
+
+    /* dark: the default, and the forced-dark case */
+    :root,
+    :root[data-theme="dark"] {
+      color-scheme:    dark;
       --bg:            #0c0b09;
       --surface:       #161410;
       --surface-2:     #1e1c18;
@@ -23,8 +34,25 @@
       --ease:          cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+    /* light: forced */
+    :root[data-theme="light"] {
+      color-scheme:    light;
+      --bg:            #f9f8f4;
+      --surface:       #f0ede6;
+      --surface-2:     #e6e2d8;
+      --border:        #dbd7cc;
+      --border-strong: #c2bdb0;
+      --text:          #1a1916;
+      --text-2:        #5a5650;
+      --text-3:        #9a9590;
+      --accent:        #a87018;
+      --accent-dim:    rgba(168, 112, 24, 0.1);
+    }
+
+    /* light: automatic — only when the host hasn't pinned dark */
     @media (prefers-color-scheme: light) {
-      :root {
+      :root:not([data-theme="dark"]) {
+        color-scheme:    light;
         --bg:            #f9f8f4;
         --surface:       #f0ede6;
         --surface-2:     #e6e2d8;
@@ -490,6 +518,15 @@
       html { scroll-behavior: auto; }
     }
   </style>
+
+  <script>
+    /* Runs before <body> paints, so the embed never flashes the wrong theme.
+       Precedence: ?theme= URL param → data-theme already on <html> → OS setting. */
+    (function () {
+      var t = new URLSearchParams(location.search).get("theme");
+      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+    })();
+  </script>
 </head>
 <body>
 
@@ -979,6 +1016,20 @@ article {
 
     formatRadios.forEach(r => r.addEventListener("change", syncDownload));
     syncDownload();
+
+    /* Let the host page flip the theme after load — e.g. when its own
+       toggle changes. Send from the parent:
+         iframe.contentWindow.postMessage({ type: "thmanyah-theme", theme: "light" }, "*");
+       Pass "auto" to hand control back to the viewer's OS setting. */
+    window.addEventListener("message", (e) => {
+      const d = e.data;
+      if (!d || d.type !== "thmanyah-theme") return;
+      if (d.theme === "light" || d.theme === "dark") {
+        document.documentElement.dataset.theme = d.theme;
+      } else if (d.theme === "auto") {
+        delete document.documentElement.dataset.theme;
+      }
+    });
   </script>
 </body>
 </html>
