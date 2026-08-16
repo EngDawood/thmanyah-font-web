@@ -11,14 +11,14 @@ There is **no build step, no bundler, no framework, and no JavaScript**. The pro
 Key facts:
 
 - npm package name: `@dawod/thmanyah-font-web`, entry points `index.css` (`main` / `style`).
-- Published artifact is **CSS only** — see `package.json` `files`: `index.css`, `sans.css`, `serif-display.css`, `serif-text.css`. Font binaries are **not** published to npm; they are fetched at runtime from `https://cdn.jsdelivr.net/gh/engdawood/thmanyah-font-web@<commit>/fonts/...` (URLs are pinned to a specific commit hash, currently `@4266a9d`).
+- Published artifact (1.3.0+) is the CSS **plus** the font binaries — see `package.json` `files`: `index.css`, `sans.css`, `serif-display.css`, `serif-text.css`, `fonts/`. The `@font-face` rules still fetch at runtime from `https://cdn.jsdelivr.net/gh/engdawood/thmanyah-font-web@<commit>/fonts/...` (pinned to a specific commit hash, currently `@4266a9d`) — the bundled copies are for consumers who want to self-host.
 - GitHub Pages serves the repo root as a static site; `index.html` redirects to `examples/demo.html` (the live demo at <https://engdawood.github.io/thmanyah-font-web/>).
 
 ## Repository layout
 
 - `index.css` — main entry: 15 `@font-face` declarations (3 families × 5 weights) plus utility classes (`.font-thmanyah-sans`, `.font-thmanyah-serif-display`, `.font-thmanyah-serif-text`, `.font-weight-light` … `.font-weight-black`).
 - `sans.css`, `serif-display.css`, `serif-text.css` — per-family subsets containing only that family's 5 `@font-face` blocks (no utility classes).
-- `fonts/<family>/{woff2,otf}/` — font binaries. woff2 files are committed to git (jsDelivr serves them from the repo); **otf files are gitignored** (local reference only, kept out of both git and npm).
+- `fonts/<family>/{woff2,otf}/` — font binaries, all 30 committed to git (15 woff2 + 15 otf, ~4.7 MB). jsDelivr serves them from the repo; they also ship in the npm tarball. The `fonts-otf` tag points at `eff8b32` as a hash-free alias.
 - `examples/demo.html` — self-contained Arabic (RTL) showcase page; opens directly in a browser, loads `../index.css`.
 - `index.html` — meta-refresh redirect to `examples/demo.html` (so GitHub Pages root works).
 - `public/image.png` — README banner image.
@@ -51,7 +51,7 @@ Release flow: bump `version` in `package.json`, push a `v*` git tag → the publ
 - **Duplicated content**: the per-family CSS files are copies of the matching sections of `index.css`. Edit them together — there is no generation step.
 - Every `@font-face` block uses `font-display: swap`, `font-style: normal`, and the same `unicode-range` covering Arabic and Latin blocks. Preserve these when adding or editing faces.
 - Weight mapping is fixed: Light=300, Regular=400, Medium=500, Bold=700, Black=900. File naming: `thmanyah-<family>-<Weight>.woff2`.
-- `.npmignore` additionally excludes `index.html`, `public/`, `examples/`, `CLAUDE.md`, vendor zips/dirs, and `fonts/**/otf/` from the npm tarball (the `files` allowlist already excludes them; the ignore file is belt-and-braces).
+- `.npmignore` additionally excludes `index.html`, `public/`, `examples/`, `CLAUDE.md`, and vendor zips/dirs from the npm tarball (the `files` allowlist already excludes them; the ignore file is belt-and-braces).
 - `package-lock.json` is gitignored on purpose.
 - Documentation is bilingual: user-facing docs are primarily **Arabic** (`README.md`, RTL HTML), with an English translation (`README.en.md`). Code comments and CSS are English. Match that split when editing.
 
@@ -60,7 +60,7 @@ Release flow: bump `version` in `package.json`, push a `v*` git tag → the publ
 There are no automated tests, linters, or CI checks on the CSS. Manual verification:
 
 1. Open `examples/demo.html` in a browser and confirm all 15 faces render (check devtools Network tab for the jsDelivr woff2 requests).
-2. Run `npm pack --dry-run` before publishing to confirm the tarball contains only the four CSS files (+ README/package.json).
+2. Run `npm pack --dry-run` before publishing to confirm the tarball contains the four CSS files, all 30 binaries under `fonts/`, and the READMEs/`package.json` — 37 files, ~2.7 MB packed.
 3. After changing CDN URLs, verify one URL directly in a browser/curl to ensure the pinned commit resolves on jsDelivr.
 
 ## Security and licensing considerations
