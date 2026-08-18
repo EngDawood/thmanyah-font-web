@@ -176,7 +176,7 @@ curl -fL "https://cdn.jsdelivr.net/npm/@dawod/thmanyah-font-web/index.css" \
   | sed 's|https://cdn.jsdelivr.net/gh/engdawood/thmanyah-font-web@4266a9d/fonts|/fonts|g' > thmanyah.css
 ```
 
-Humans can also grab per-weight or per-family zips from the download section of the demo page: https://engdawood.github.io/thmanyah-font-web/ (zips are built in the browser — there is no zip URL for an agent to fetch).
+Humans can also grab per-weight or per-family zips from the download section of the demo page: https://engdawood.com/ar/projects/thmanyah-fonts-web/
 
 ## Arabic / RTL checklist
 
