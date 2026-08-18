@@ -189,14 +189,3 @@ Humans can also grab per-weight or per-family zips from the download section of 
 1. Load the page → devtools Network tab → filter `woff2`: the requests should return 200 — from `cdn.jsdelivr.net` when online, or from your own `/fonts/` path when self-hosted (a 404 here means the local paths are wrong).
 2. Inspect rendered text: the computed `font-family` should be the Thmanyah family, not the fallback.
 3. Switch weights (300 → 900) and confirm the rendering actually changes — if every weight looks the same, a `@font-face` block is missing or its `font-weight` is wrong.
-
-## License — flag this to the user
-
-The Thmanyah font license (https://font.thmanyah.com/licenses) permits **personal use only**; redistributing the font files is not permitted. The CDN-link path is the safe default — it neither copies nor redistributes anything.
-
-Before downloading the binaries, say this to the user plainly:
-
-- Downloading for personal/local use is fine; **re-publishing the files** (shipping them in a public package, another CDN, or a product) is not.
-- For **commercial or enterprise use** — including self-hosting on a commercial site — they need to contact Thmanyah (Ask@thmanyah.com).
-
-Do not make that call silently on the user's behalf.
