@@ -58,6 +58,15 @@
 />
 ```
 
+نسخة مصغّرة (minified) تولّدها jsDelivr تلقائيًا:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@dawod/thmanyah-font-web/index.min.css"
+/>
+```
+
 **unpkg:**
 
 ```html
