@@ -17,6 +17,8 @@
 <div dir="ltr" align="left">
 
 [![NPM Version](https://img.shields.io/npm/v/@dawod/thmanyah-font-web)](https://www.npmjs.com/package/@dawod/thmanyah-font-web)
+[![NPM Downloads](https://img.shields.io/npm/dt/@dawod/thmanyah-font-web?label=npm%20downloads)](https://www.npmjs.com/package/@dawod/thmanyah-font-web)
+[![jsDelivr Hits](https://img.shields.io/jsdelivr/npm/hm/@dawod/thmanyah-font-web)](https://www.jsdelivr.com/package/npm/@dawod/thmanyah-font-web)
 [![Font Weights](https://img.shields.io/badge/weights-300%20·%20400%20·%20500%20·%20700%20·%20900-blueviolet)](#عائلات-الخطوط-والأوزان)
 
 </div>
