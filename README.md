@@ -17,8 +17,11 @@
 <div dir="ltr" align="left">
 
 [![NPM Version](https://img.shields.io/npm/v/@dawod/thmanyah-font-web)](https://www.npmjs.com/package/@dawod/thmanyah-font-web)
-[![NPM Downloads](https://img.shields.io/npm/dt/@dawod/thmanyah-font-web?label=npm%20downloads)](https://www.npmjs.com/package/@dawod/thmanyah-font-web)
-[![jsDelivr Hits](https://img.shields.io/jsdelivr/npm/hm/@dawod/thmanyah-font-web)](https://www.jsdelivr.com/package/npm/@dawod/thmanyah-font-web)
+[![npm downloads/week](https://img.shields.io/npm/dw/@dawod/thmanyah-font-web?label=npm%20%2Fweek)](https://www.npmjs.com/package/@dawod/thmanyah-font-web)
+[![npm downloads/month](https://img.shields.io/npm/dm/@dawod/thmanyah-font-web?label=npm%20%2Fmonth)](https://www.npmjs.com/package/@dawod/thmanyah-font-web)
+[![npm downloads total](https://img.shields.io/npm/dt/@dawod/thmanyah-font-web?label=npm%20total)](https://www.npmjs.com/package/@dawod/thmanyah-font-web)
+[![jsDelivr npm hits](https://img.shields.io/jsdelivr/npm/hm/@dawod/thmanyah-font-web?label=jsDelivr%20npm)](https://www.jsdelivr.com/package/npm/@dawod/thmanyah-font-web)
+[![jsDelivr GitHub hits](https://img.shields.io/jsdelivr/gh/hm/engdawood/thmanyah-font-web?label=jsDelivr%20GitHub)](https://www.jsdelivr.com/package/gh/engdawood/thmanyah-font-web)
 [![Font Weights](https://img.shields.io/badge/weights-300%20·%20400%20·%20500%20·%20700%20·%20900-blueviolet)](#عائلات-الخطوط-والأوزان)
 
 </div>
