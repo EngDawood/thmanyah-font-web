@@ -1,0 +1,22 @@
+{
+  "name": "thmanyah-font-web",
+  "owner": {
+    "name": "engdawood",
+    "url": "https://github.com/engdawood"
+  },
+  "metadata": {
+    "description": "Community plugin for adding the Thmanyah (ثمانية) Arabic font family to web projects."
+  },
+  "plugins": [
+    {
+      "name": "thmanyah-font",
+      "source": "./",
+      "description": "Add the Thmanyah Arabic font family (Sans, Serif Display, Serif Text) to a web project via npm or the jsDelivr CDN, with a /thmanyah-font:setup command and per-project settings.",
+      "version": "1.0.0",
+      "homepage": "https://engdawood.github.io/thmanyah-font-web/",
+      "repository": "https://github.com/engdawood/thmanyah-font-web",
+      "license": "SEE LICENSE IN https://font.thmanyah.com/licenses",
+      "keywords": ["thmanyah", "arabic", "font", "rtl", "webfont"]
+    }
+  ]
+}

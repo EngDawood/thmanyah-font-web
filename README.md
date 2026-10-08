@@ -113,6 +113,22 @@ import "@dawod/thmanyah-font-web";
 
 </div>
 
+### إضافة Claude Code
+
+ثبّت الإضافة من متجر هذا المستودع ثم شغّل أمر الإعداد:
+
+<div dir="ltr" align="left">
+
+```
+/plugin marketplace add EngDawood/thmanyah-font-web
+/plugin install thmanyah-font@thmanyah-font-web
+/thmanyah-font:setup
+```
+
+</div>
+
+يسألك الأمر عن CDN أو npm وعن العائلات المطلوبة، ثم يضيف الخط لمشروعك ويحفظ اختياراتك في `.claude/thmanyah-font.local.md` (خارج git).
+
 ---
 
 ## 🔤 عائلات الخطوط والأوزان

@@ -71,6 +71,18 @@ import "@dawod/thmanyah-font-web/serif-text.css";
 @import "@dawod/thmanyah-font-web/sans.css";
 ```
 
+### Claude Code plugin
+
+Install the plugin from this repo's marketplace, then run the setup command:
+
+```
+/plugin marketplace add EngDawood/thmanyah-font-web
+/plugin install thmanyah-font@thmanyah-font-web
+/thmanyah-font:setup
+```
+
+The command asks for CDN or npm and which families you want, wires the font into your project, and saves your choices in `.claude/thmanyah-font.local.md` (git-ignored).
+
 ---
 
 ## Font Families & Weights

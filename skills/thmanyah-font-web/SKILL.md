@@ -178,6 +178,10 @@ curl -fL "https://cdn.jsdelivr.net/npm/@dawod/thmanyah-font-web/index.css" \
 
 Humans can also grab per-weight or per-family zips from the download section of the demo page: https://engdawood.com/ar/projects/thmanyah-fonts-web/
 
+## Per-project settings
+
+If `.claude/thmanyah-font.local.md` exists, read its YAML frontmatter first and follow it instead of asking again: `source` (`cdn` or `npm`), `families`, `body_family`, `heading_family`, `rtl`. The `/thmanyah-font:setup` command creates and updates this file. Treat it as user-local config: never commit it.
+
 ## Arabic / RTL checklist
 
 - Set `lang="ar"` and `dir="rtl"` on `<html>` (or `direction: rtl` in CSS) for Arabic content.

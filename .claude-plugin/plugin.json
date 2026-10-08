@@ -1,0 +1,13 @@
+{
+  "name": "thmanyah-font",
+  "version": "1.0.0",
+  "description": "Add the Thmanyah Arabic font family (Sans, Serif Display, Serif Text) to a web project via npm or the jsDelivr CDN.",
+  "author": {
+    "name": "engdawood",
+    "url": "https://github.com/engdawood"
+  },
+  "homepage": "https://engdawood.github.io/thmanyah-font-web/",
+  "repository": "https://github.com/engdawood/thmanyah-font-web",
+  "license": "SEE LICENSE IN https://font.thmanyah.com/licenses",
+  "keywords": ["thmanyah", "arabic", "font", "rtl", "webfont"]
+}

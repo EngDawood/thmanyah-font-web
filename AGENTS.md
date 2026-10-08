@@ -21,6 +21,7 @@ Key facts:
 - `fonts/<family>/{woff2,otf}/` — font binaries, all 30 committed to git (15 woff2 + 15 otf, ~4.7 MB). jsDelivr serves them from the repo; they also ship in the npm tarball. The `fonts-otf` tag points at `eff8b32` as a hash-free alias.
 - `examples/demo.html` — self-contained Arabic (RTL) showcase page; opens directly in a browser, loads `../index.css`.
 - `index.html` — meta-refresh redirect to `examples/demo.html` (so GitHub Pages root works).
+- `.claude-plugin/{marketplace,plugin}.json`, `commands/setup.md`, `skills/thmanyah-font-web/SKILL.md` — Claude Code plugin (`/plugin marketplace add EngDawood/thmanyah-font-web`, then `/plugin install thmanyah-font@thmanyah-font-web`). The plugin root is the repo root; none of this ships in the npm tarball. It only links to the CDN or npm package and never copies font binaries.
 - `public/image.png` — README banner image.
 - `README.md` (Arabic, primary) and `README.en.md` (English) — user docs. Keep both in sync when changing usage, weights, class names, or URLs.
 - `.github/workflows/static.yml` — deploys the whole repo to GitHub Pages on every push to `main`.
