@@ -25,7 +25,7 @@
 
 **[🇬🇧 Read in English](./README.en.md)**
 
-## 🌍 تجربة حية
+## 🌍 جرب اوزان الخط اونلاين
 
 🔗 [عرض خط ثمانية](https://engdawood.github.io/thmanyah-font-web/examples/demo.html)
 
@@ -41,7 +41,7 @@
 
 ---
 
-## 🚀 البداية السريعة
+## تثبيت سريع
 
 ### الطريقة ١ — CDN (الأسرع)
 
