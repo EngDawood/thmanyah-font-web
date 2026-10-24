@@ -16,6 +16,7 @@
 [![Font Weights](https://img.shields.io/badge/weights-300%20·%20400%20·%20500%20·%20700%20·%20900-blueviolet)](#عائلات-الخطوط-والأوزان)
 [![](https://data.jsdelivr.com/v1/package/npm/@dawod/thmanyah-font-web/badge)](https://www.jsdelivr.com/package/npm/@dawod/thmanyah-font-web)
 
+</div>
 ![خط ثمانية — أصيل. حديث. مرن. حي.](./public/image.png)
 
 **حزمة مجتمعية لعائلة خطوط ثمانية للويب — ثلاث عائلات، خمسة أوزان لكل عائلة.** أضف ملف CSS واحد لمشروعك وابدأ باستخدام ثمانية سانس، ثمانية سيريف ديسبلاي، وثمانية سيريف تكست فورًا.
