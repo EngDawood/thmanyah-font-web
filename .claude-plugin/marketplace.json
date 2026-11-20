@@ -10,8 +10,8 @@
   "plugins": [
     {
       "name": "arabic-web-fonts-helper",
-      "source": "./",
-      "description": "Skill that helps Claude add Arabic web fonts to a project: CDN or npm setup, usage, RTL checklist, and optional self-hosting.",
+      "source": "./plugins/arabic-web-fonts-helper",
+      "description": "Skill that helps Claude add Arabic web fonts to a project: CDN or npm setup, usage, RTL checklist.",
       "version": "1.0.0",
       "category": "design",
       "keywords": [
