@@ -1,0 +1,34 @@
+{
+  "name": "engdawood-plugins",
+  "owner": {
+    "name": "engdawood",
+    "url": "https://github.com/engdawood"
+  },
+  "metadata": {
+    "description": "Community plugins by engdawood."
+  },
+  "plugins": [
+    {
+      "name": "arabic-web-fonts-helper",
+      "source": "./",
+      "description": "Skill that helps Claude add Arabic web fonts to a project: CDN or npm setup, usage, RTL checklist, and optional self-hosting.",
+      "version": "1.0.0",
+      "category": "design",
+      "keywords": [
+        "arabic",
+        "rtl",
+        "webfont",
+        "web-fonts",
+        "css",
+        "typography",
+        "font",
+        "عربي",
+        "خط عربي",
+        "خطوط الويب",
+        "خطوط عربية",
+        "كتابة من اليمين لليسار",
+        "طباعة"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "arabic-web-fonts-helper",
+  "displayName": "Arabic Web Fonts Helper",
+  "version": "1.0.0",
+  "description": "Skill that helps Claude add Arabic web fonts to a project: CDN or npm setup, font-family and weight usage, RTL checklist, and optional self-hosting.",
+  "author": {
+    "name": "engdawood",
+    "url": "https://github.com/engdawood"
+  },
+  "homepage": "https://engdawood.github.io/thmanyah-font-web/",
+  "repository": "https://github.com/engdawood/thmanyah-font-web",
+  "keywords": [
+    "arabic",
+    "rtl",
+    "webfont",
+    "web-fonts",
+    "css",
+    "typography",
+    "font",
+    "عربي",
+    "خط عربي",
+    "خطوط الويب",
+    "خطوط عربية",
+    "كتابة من اليمين لليسار",
+    "طباعة"
+  ]
+}
