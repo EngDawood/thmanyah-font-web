@@ -10,7 +10,11 @@ When you ask Claude to use Thmanyah or Arabic web fonts, the skill guides it to 
 - Code it suggests for your project loads a stylesheet from `cdn.jsdelivr.net`, which serves the npm package, or installs `@dawod/thmanyah-font-web` with npm. Your visitors' browsers contact jsDelivr to fetch the font files.
 - It sends no data anywhere else and bundles no font files.
 
-## License note
+## License
+
+This plugin (the skill and README) is MIT licensed, see `LICENSE`. That does not cover the font.
+
+## Font license note
 
 The font belongs to Thmanyah, and its license (https://font.thmanyah.com/licenses) allows personal use and does not authorize redistribution. Check it before using the font in commercial work.
 
